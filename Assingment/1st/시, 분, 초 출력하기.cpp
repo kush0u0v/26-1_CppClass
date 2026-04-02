@@ -15,8 +15,15 @@
 #include <iostream>
 using namespace std;
 
-int time (int a, int b = 0, int c = 0){
+void time (int a, int b = 0, int c = 0){
+    if (a < 0 || b < 0 || c < 0){
+        cout << "incorrect number" << endl;
+        return;
+    }
 
+    int ans = (a * 3600) + (b * 60) + (c);
+    cout << ans << endl;
+    return; 
 }
 
 int main() {
@@ -31,13 +38,16 @@ int main() {
             cout << ans << endl;
             break;
         case(2):
-
+            cin >> a;
+            time(a);
             break;
         case(3):
-
+            cin >> a >> b;
+            time(a, b);
             break;
         case(4):
-
+            cin >> a >> b >> c;
+            time(a, b, c);
             break;
         default:
             cout << "wrong menu" << endl;
