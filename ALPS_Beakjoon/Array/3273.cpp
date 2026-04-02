@@ -46,7 +46,7 @@ int main(){
         cin >> arr[i];  
     }
 
-    int x;
+    int x; 
     cin >> x; // x = ans
 
     qsort(arr, n, sizeof(*arr), compare);
