@@ -26,7 +26,6 @@
 // *p를 const 참조자로 입력받는 이유에 대해 생각해보세요.
 #include <iostream>
 using namespace std;
-
 class PlayerChanger;
 
 class Player{
@@ -37,8 +36,9 @@ class Player{
         friend class PlayerChanger;
         friend void print_player_information(const Player &p);
     public:
-        Player(string a, int b, int c) : name(a), hp(b), xp(c) {
-
+        Player(string a, int b, int c) : 
+            name(a), hp(b), xp(c) {
+        
         }
 };
 
@@ -50,9 +50,8 @@ class PlayerChanger{
 };
 
 void print_player_information(const Player &p) {
-    cout << p.name << " " << p.hp << " " << p.xp << endl;
+    cout << p.name <<" "<< p.hp <<" "<< p.xp << endl;
 }
-
 
 
 int main()
